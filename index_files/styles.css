@@ -1,0 +1,672 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #4D4D4D; /* Темно-серый для текста */
+    background-color: #FFF8F0; /* Мягкий кремовый фон */
+}
+
+header {
+    background-color: #F6D9E1; /* Нежно-розовый для шапки */
+    color: #4D4D4D;
+    padding: 20px;
+    text-align: center;
+}
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    /* Стили для списка, если нужно */
+}
+
+.nav-button {
+    background-color: #F6D9E1; /* Светло-розовый */
+    border: none;
+    padding: 10px 20px;
+    font-family: Times;
+    font-size: 1.1em;
+    cursor: pointer;
+    color: #000000;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.nav-button:hover {
+    background-color: #a48f95; /* Темно-розовый */
+}
+
+/* Модальные окна */
+.modal {
+    display: none; /* Скрыты по умолчанию */
+    position: fixed; /* Остаются на месте */
+    z-index: 1000; /* На вершине */
+    left: 0;
+    top: 0;
+    width: 100%; /* Полная ширина */
+    height: 100%; /* Полная высота */
+    overflow: auto; /* Включает прокрутку при необходимости */
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+}
+
+/* Содержимое модального окна */
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto; /* Центрирование */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Ширина модального окна */
+    max-width: 500px;
+    border-radius: 5px;
+    position: relative;
+}
+
+
+/* Общие стили для раздела "Контакты" */
+.contacts-section {
+  background-color: #FFF5F7; /* Светло-розовый фон */
+  color: #4D4D4D; /* Темно-серый текст */
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 20px auto; /* Центрирование на странице */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легкая тень */
+}
+
+.delivery-section {
+  background-color: #FFF5F7; /* Светло-розовый фон */
+  color: #4D4D4D; /* Темно-серый текст */
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 20px auto; /* Центрирование на странице */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легкая тень */
+}
+
+/* Заголовок */
+.delivery-section h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.delivery-section ul {
+  list-style: none; /* Убираем стандартные маркеры списка */
+  padding: 0;
+  margin: 0;
+}
+
+.delivery-section ul li {
+  font-size: 16px;
+  margin-bottom: 10px;
+
+ 
+}
+
+
+
+/* Ссылки на соцсети */
+.delivery-section ul li a {
+  color: #D97D94; /* Темно-розовый */
+  text-decoration: none; /* Убираем подчеркивание */
+  transition: color 0.3s; /* Эффект при наведении */
+}
+
+.delivery-section ul li a:hover {
+  color: #FFB6C1; /* Светлее при наведении */
+}
+
+
+.moti-section {
+  background-color: #FFF5F7; /* Светло-розовый фон */
+  color: #4D4D4D; /* Темно-серый текст */
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 20px auto; /* Центрирование на странице */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легкая тень */
+}
+
+/* Заголовок */
+.contacts-section h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* Список контактов */
+.contacts-section ul {
+  list-style: none; /* Убираем стандартные маркеры списка */
+  padding: 0;
+  margin: 0;
+}
+
+.contacts-section ul li {
+  font-size: 16px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center; /* Центрируем текст с иконками */
+}
+
+.contacts-section ul li strong {
+  font-weight: bold;
+  margin-right: 10px;
+  color: #4D4D4D;
+}
+
+/* Ссылки на соцсети */
+.contacts-section ul li a {
+  color: #D97D94; /* Темно-розовый */
+  text-decoration: none; /* Убираем подчеркивание */
+  transition: color 0.3s; /* Эффект при наведении */
+}
+
+.contacts-section ul li a:hover {
+  color: #FFB6C1; /* Светлее при наведении */
+}
+
+/* Схема проезда */
+.contacts-section p {
+  font-size: 14px;
+  margin-top: 15px;
+  line-height: 1.5; /* Улучшаем читаемость */
+}
+
+.contacts-section a {
+  color: #D97D94;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.contacts-section a:hover {
+  color: #FFB6C1;
+}
+
+/* Кнопка закрытия */
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #000;
+}
+
+/* Дополнительные стили для контента модального окна */
+.modal-content h2 {
+    margin-top: 0;
+}
+
+.modal-content p {
+    line-height: 1.5;
+}
+
+.hero {
+    padding: 50px;
+    background: url('images/background.png') no-repeat center center/cover;
+    border-radius: 5px;
+    color: #4D4D4D;
+    text-align: center;
+}
+
+.hero {
+    padding: 50px;
+    background: url('images/background.png') no-repeat center center/cover;
+    border-radius: 5px;
+    color: #4D4D4D;
+    text-align: center;
+}
+
+.hero h1, .hero h11 {
+    font-size: 2.5em;
+    background-color: #f6d9e175;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.hero p {
+    font-size: 1.2em;
+    background-color: #f6d9e175;
+    color: #4D4D4D;
+    padding: 4px 10px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+
+@media (max-width: 768px) {
+  .hero h1 {
+  font-size: 2em;
+       } 
+  .hero h11{
+    font-size: 2em; 
+  }
+  .hero p{
+    font-size: 1em;
+  }
+}
+
+.hero .buttons button {
+    background-color: #FFB6C1; /* Светло-розовый */
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 1em;
+    cursor: pointer;
+    color: #FFF;
+    border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.hero .buttons button:hover {
+    background-color: #D97D94; /* Темно-розовый */
+}
+
+.catalog-title{
+    text-align: center;
+    margin-top: 50px;
+
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #D97D94; /* Темно-розовый */
+}
+
+
+#catalog {
+    padding: 50px;
+    text-align: center;
+    background-color: #FFF5F7; /* Светло-розовый оттенок */
+}
+
+
+
+
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Гибкая сетка */
+  gap: 20px;
+  padding: 20px;
+}
+
+.product-card {
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column; /* Элементы располагаются в столбик */
+  height: auto;
+  position: relative; /* Добавляем позиционирование */
+}
+
+.product-card:hover {
+  background: #ded4d4
+}
+
+
+
+
+
+.product-title {
+  font-size: 20px;
+  margin: 10px 0;
+  word-wrap: break-word; /* Перенос длинного текста */
+  min-height: 40px; /* Минимальная высота для выравнивания */
+}
+
+.product-price {
+  font-size: 16px;
+  color: #333;
+  margin: 10px 0; /* Отступы для выравнивания */
+  min-height: 20px; /* Устанавливаем одинаковую высоту для цен */
+  margin-top: auto; /* Отодвигаем цену вниз, чтобы она не накладывалась на название */
+}
+
+.product-grid .buttons {
+  margin-top: 20px; /* Немного увеличиваем расстояние от других элементов */
+  display: flex;
+  justify-content: center; /* Центрируем кнопку */
+}
+
+.product-grid .buttons button {
+  background-color: #FFB6C1; /* Светло-розовый */
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  color: #FFF;
+  border-radius: 5px;
+}
+.product-image {
+  width: 100%;
+  border-radius: 10px;
+}
+
+
+.product-delivery {
+  font-size: 14px;
+  color: #666;
+  margin: 5px 0;
+  min-height: 20px; /* Устанавливаем одинаковую высоту для доставки */
+}
+
+
+
+.product-grid .buttons button:hover {
+  background-color: #D97D94; /* Темно-розовый */
+}
+
+
+
+/* Стиль модального окна */
+.modal {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Контейнер для контента */
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    position: relative;
+}
+
+/* Фото товара */
+.modal-image {
+    width: 80%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Заголовок */
+.modal-title {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+/* Описание */
+.modal-description, .modal-ingredients {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Кнопка закрытия */
+.close-modal {
+    background: #ff4c4c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+
+.close-modal:hover {
+    background: #e43e3e;
+}
+
+
+
+
+
+
+.cart-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.cart-button button {
+  background-color: #FFB6C1; /* Светло-розовый */
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #FFF;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cart-button .quantity-button {
+    width: 25px;
+    height: 25px;
+    font-size: 10px;
+}
+
+
+.cart-button button:hover {
+  background-color: #D97D94; /* Темно-розовый */
+}
+
+
+
+/* Всплывающее окно корзины */
+#cart-popup {
+  position: absolute;
+  bottom: 80px;
+  right: 0;
+  width: 280px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  display: none; /* Скрываем по умолчанию */
+}
+#cart-close {
+  font-size: 24px;
+  font-weight: bold;
+  color: #4D4D4D;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  transition: color 0.3s ease;
+}
+
+#cart-close:hover {
+  color: #D97D94; /* Цвет при наведении */
+}
+
+
+#cart-popup h3 {
+  font-size: 16px;
+  margin: 0 0 10px 0;
+}
+
+#cart-items {
+  list-style: none;
+  padding: 0;
+  margin: 1;
+}
+
+#cart-items li {
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+#cart-counter {
+  position: absolute;
+  top: -7px;
+  right: 3px;
+  background: #D97D94; /* Темно-розовый */
+  color: #FFF;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  display: none; /* Скрыт по умолчанию */
+}
+
+
+#checkout-button {
+  background-color: #FFB6C1; /* Светло-розовый */
+  color: #FFF;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 0; /* Добавление вертикальных отступов */
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 14px;
+  width: 100%; /* Кнопка занимает всю ширину контейнера */
+  text-align: center;
+  display: block;
+}
+
+
+#checkout-button:hover {
+  background-color: #D97D94; /* Темно-розовый при наведении */
+}
+
+
+#total-price {
+  color: #D97D94; /* Темно-розовый цвет */
+  font-weight: bold; /* Сделаем текст жирным для акцента */
+  font-size: 16px; /* Можно чуть увеличить размер */
+}
+
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+
+
+
+.quantity-button {
+    text-align: centre;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+}
+
+.cart-item span1{
+ text-align: left;
+}
+
+
+.cart-item span3{
+ text-align: right;
+}
+
+
+
+
+.order-section {
+    background-color: #FFF5F7; /* Светло-розовый фон */
+    color: #4D4D4D; /* Темно-серый текст */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 20px auto; /* Центрирование на странице */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легкая тень */
+    text-align: center;
+}
+
+.order-button {
+    background-color: #FFB6C1; /* Светло-розовый */
+    border: none;
+    margin: 2px auto 0; /* Увеличенный верхний отступ */
+    display: block; /* Центрирование кнопки */		
+    padding: 10px 30px;
+    font-size: 1.3em;
+    cursor: pointer;
+    color: #FFF;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.order-button:hover {
+    background-color: #D97D94; /* Темно-розовый */
+}
+
+
+
+
+
+input[type="tel"] {
+    width: 90%;
+    padding: 10px;
+    margin: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none; text-align: center;
+}
+
+
+
+#toast {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #4CAF50; /* По умолчанию зелёный */
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    padding: 15px;
+    position: fixed;
+    left: 50%;
+    bottom: 30px;
+    font-size: 16px;
+    z-index: 1000;
+    transition: visibility 0s, opacity 0.5s linear;
+    opacity: 0;
+}
+
+#toast.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+footer {
+    background-color: #F6D9E1; /* Нежно-розовый */
+    color: #4D4D4D;
+    text-align: center;
+    padding: 10px;
+}
+
+
+
